@@ -1,69 +1,53 @@
-# React + TypeScript + Vite
+## Dragon Ball APP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Logo del proyecto](./src/assets/image_readmin.jpg)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Proyecto React + TailwindCSS + TypeScript
 
-## Expanding the ESLint configuration
+Este proyecto está construido con **React**, **TailwindCSS** y **TypeScript**, siguiendo una arquitectura basada en **features (módulos/funcionalidades)** para mantener el código organizado, escalable y fácil de mantener.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tecnologías
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- [React](https://react.dev/) - Librería para la construcción de interfaces
+- [TypeScript](https://www.typescriptlang.org/) - Tipado estático
+- [TailwindCSS](https://tailwindcss.com/) - Estilos utilitarios
+- [Vite](https://vitejs.dev/) - Bundler rápido para desarrollo
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📂 Estructura de Carpetas
+
+```
+├── assets/ # Imágenes, íconos, estilos globales
+│ ├── images/
+│ ├── icons/
+│ └── styles/
+│
+├── components/ # Componentes UI reutilizables (botones, inputs, modals, etc.)
+│ ├── ui/
+│ └── layout/
+│
+├── features/ # Módulos principales de la aplicación
+│ └── auth/ # Ejemplo: Autenticación
+│ ├── components/ # Componentes específicos del módulo
+│ ├── hooks/ # Hooks personalizados del módulo
+│ ├── services/ # Lógica de comunicación con APIs relacionadas
+│ ├── types/ # Tipos e interfaces TS específicos
+│ └── pages/ # Páginas del módulo (Login, Register, etc.)
+│
+├── hooks/ # Hooks globales
+├── lib/ # Configuración de librerías externas (axios, firebase, etc.)
+├── pages/ # Páginas principales (Home, About, NotFound, etc.)
+├── services/ # Servicios globales (API base, helpers de fetch, etc.)
+├── store/ # Estado global (Zustand, Redux, Context API)
+├── types/ # Tipos globales de TypeScript
+├── utils/ # Funciones helpers/utilidades
+│
+├── App.tsx # Componente principal
+├── main.tsx # Punto de entrada (ReactDOM)
+└── tailwind.config.js
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+✍️ Autor: **Jun Camilo Penagos**  
