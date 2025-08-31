@@ -1,4 +1,4 @@
-## Dragon Ball APP
+## Dragon Ball App
 
 ![Logo del proyecto](./src/assets/image_readmin.jpg)
 
