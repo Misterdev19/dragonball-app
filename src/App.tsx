@@ -1,11 +1,9 @@
-import './App.css'
-import { Button } from "@/components/ui/button"
-import Layout from "@/components/layout/layout"
+import "./App.css";
+import { Button } from "@/components/ui/button";
+import Layout from "@/components/layout/layout";
 
 function App() {
-  return (
-     <Layout>{0}</Layout>
-  )
+  return <Layout>{"Dragon Ball App"}</Layout>;
 }
 
-export default App
+export default App;
